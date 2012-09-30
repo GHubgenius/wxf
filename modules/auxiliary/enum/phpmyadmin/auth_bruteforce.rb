@@ -28,6 +28,7 @@ class WebXploit < WXf::WXfmod_Factory::Auxiliary
   end
   
   def run
+
 	username = datahash['USERNAME']
 
 	# Prepare file
@@ -60,6 +61,7 @@ class WebXploit < WXf::WXfmod_Factory::Auxiliary
 		end	
 
 	end
+
 
   end
   
