@@ -1,0 +1,13 @@
+source 'http://rubygems.org'
+
+# For threaded requests
+gem 'celluloid', '0.12.0'
+
+# latest version of mechanize
+gem 'mechanize', '2.5.1'
+
+# SQLite
+gem 'sqlite3'
+
+
+

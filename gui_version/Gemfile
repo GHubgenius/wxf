@@ -1,0 +1,10 @@
+source 'http://rubygems.org'
+
+# SQLite
+gem 'jdbc-sqlite3'
+
+# Buby
+gem 'buby'
+
+# Nokogiri
+gem 'nokogiri'
