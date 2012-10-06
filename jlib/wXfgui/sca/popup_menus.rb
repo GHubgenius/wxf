@@ -1,1 +1,0 @@
-require 'wXfgui/sca/popup_menus/sca_popup'

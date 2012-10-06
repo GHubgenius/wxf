@@ -1,1 +1,0 @@
-require 'wXfgui/sca/frames/file_open_frame'

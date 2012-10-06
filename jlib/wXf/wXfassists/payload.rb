@@ -1,1 +1,0 @@
-require 'wXf/wXfassists/payload/rfi'

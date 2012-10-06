@@ -1,1 +1,0 @@
-require 'wXfgui/main/tabs/main_tabs'

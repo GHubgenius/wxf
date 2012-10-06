@@ -1,1 +1,0 @@
-require 'wXfgui/analysis/dt_modules/dt_module_handler'

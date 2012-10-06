@@ -1,5 +1,0 @@
-require 'wXf/wXfassists/general'
-require 'wXf/wXfassists/auxiliary'
-require 'wXf/wXfassists/buby'
-require 'wXf/wXfassists/exploit'
-require 'wXf/wXfassists/payload'
