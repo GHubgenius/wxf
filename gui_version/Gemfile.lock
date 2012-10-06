@@ -1,0 +1,14 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    buby (1.3.1-java)
+    jdbc-sqlite3 (3.7.2)
+    nokogiri (1.5.5-java)
+
+PLATFORMS
+  java
+
+DEPENDENCIES
+  buby
+  jdbc-sqlite3
+  nokogiri
