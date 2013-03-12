@@ -17,8 +17,8 @@ module Payload
            servlet = WXf::WXfwebserver::Configurable
            svr.add_servlet(opts['LPATH'], servlet,opts)
            svr.start
-           rescue
-            print("[wXf] Error when starting the webserver: #{$!}\n")
+           rescue => e
+            print("[wXf] Error when starting the webserver: #{e}\n")
          end      
        end
        
@@ -31,9 +31,9 @@ module Payload
            svr = WXf::WXfwebserver::WebServer.new(opts,control)
            control.add_web_activity(svr)
            svr.add_file(opts)
-           svr.start
-           rescue
-            print "[wXf] Error when starting the webserver: #{$!}\n"
+           svr.start 
+           rescue => e
+            print "[wXf] Error when starting the webserver: #{e}\n"
          end      
         end
     

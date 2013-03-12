@@ -246,8 +246,8 @@ module WXfmod_Factory
        self.store(opt.name, opt)
        perform_sort
      
-     rescue => $!
-     print(" #{$!}\n")  
+     rescue => e
+     print(" #{e}\n")  
        
      end
       

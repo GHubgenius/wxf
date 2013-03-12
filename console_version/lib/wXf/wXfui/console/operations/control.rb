@@ -44,8 +44,8 @@ module Operations
           prnt_gen(" exec command: #{line}"+ "\n")
           begin
            system_call(line)
-           rescue $!
-           prnt_err(" Console call error: #{$!}")
+           rescue => e
+           prnt_err(" Console call error: #{e}")
           end
           return
         end

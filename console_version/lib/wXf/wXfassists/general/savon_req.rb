@@ -85,11 +85,16 @@ module SavonReq
     # 
     #   
     def simple_savon_client(opts={})
+      proxyp = opts['PROXYP']
+      proxya = opts['PROXYA']
       rurl = opts['RURL']
       begin
-        WAx::WAxHTTPLibs::Savon::Client.new("#{rurl}")
-      rescue => $!
-        prnt_err(" SavonReq Error: #{$!}")
+        client = WAx::WAxHTTPLibs::Savon::Client.new("#{rurl}")
+        client.request.proxy.port = "#{proxyp}" if proxyp
+        client.request.proxy.host = "#{proxya}" if proxya
+        return client
+      rescue => e
+        prnt_err(" SavonReq Error: #{e}")
       end
     end
     
@@ -131,8 +136,8 @@ module SavonReq
         else
           prnt_err(" You forgot the RACTION or PARAM/VALUE option(s)!")
         end
-      rescue => $!
-        prnt_err(" SavonReq Error: #{$!}")
+      rescue => e
+        prnt_err(" SavonReq Error: #{e}")
       end
    end
     

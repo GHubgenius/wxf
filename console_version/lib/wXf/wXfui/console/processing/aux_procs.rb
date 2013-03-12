@@ -96,8 +96,8 @@ module Processing
       check(activity, ['LFILE','UA', 'CONTENT', 'RURLS'])
         begin
           activity.run
-        rescue => $!
-          print("The following error occurred: #{$!}" + "\n")
+        rescue => e
+          print("The following error occurred: #{e}" + "\n")
          reset(activity, ['LFILE','UA', 'CONTENT', 'RURLS'])
         end
       reset(activity,['LFILE','UA', 'CONTENT', 'RURLS'])     

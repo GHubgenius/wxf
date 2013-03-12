@@ -47,8 +47,8 @@ module Processing
              svr.add_servlet(opts['LPATH'], servlet, servlet_opts)
                  
              svr.start
-           rescue
-             control.prnt_err("[wXf] Error when starting the webserver: #{$!}\n")
+           rescue => e
+             control.prnt_err("[wXf] Error when starting the webserver: #{e}\n")
            end
          elsif(opts['LFILE'])
            begin
@@ -56,8 +56,8 @@ module Processing
              control.add_web_activity(svr)
              svr.add_file(opts)
              svr.start
-           rescue
-            control.prnt_err("[wXf] Error when starting the webserver: #{$!}\n")
+           rescue => e
+            control.prnt_err("[wXf] Error when starting the webserver: #{e}\n")
            end
          end
        end

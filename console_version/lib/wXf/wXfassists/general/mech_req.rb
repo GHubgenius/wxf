@@ -243,8 +243,8 @@ module MechReq
           rescue WAx::WAxHTTPLibs::Mechanize::ResponseCodeError => self.rce
             temp_rce_code = "#{self.rce}".match(/\d{3}/)
             self.rce_code = temp_rce_code[0].to_i   
-          rescue => $!            
-            prnt_err("Mechanize Error: #{$!}")
+          rescue => e            
+            prnt_err("Mechanize Error: #{e}")
           
         
         end
