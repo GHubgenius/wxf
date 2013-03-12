@@ -41,7 +41,8 @@ class WebXploit < WXf::WXfmod_Factory::Auxiliary
    
 })
       
-     client.request.basic_auth("#{user}", "#{pass}")
+    
+        client.request.basic_auth("#{user}", "#{pass}") if user and pass
    
      
      if (client.respond_to?('wsdl')) and (client.wsdl.respond_to?('soap_actions'))
@@ -56,9 +57,9 @@ class WebXploit < WXf::WXfmod_Factory::Auxiliary
        
      end
      
-    rescue => $!
+    rescue => e
       
-     prnt_err(" #{$!}")
+     prnt_err(" #{e}")
        
        
    end
